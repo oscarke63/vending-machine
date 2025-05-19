@@ -6,12 +6,13 @@ products = {
     'A5': {'name': 'Juice', 'price': 60.0},
 
 }
+
 def display_menu():
     print("Available Items:")
     for code, product in products.items():
         print(f"{code}: {product['name']} - ${product['price']:.2f}")
 def select_item():
-    item_code = input("Enter the item code: ").strip().upper()
+    item_code = input("Enter Item Code: ")
     if item_code in products:
         item = products[item_code]
         print(f"You selected: {item['name']} - ${item['price']:.2f}")
@@ -59,3 +60,4 @@ def main():
         if continue_transaction == 'n':
             print("Thank you for using the Smart Vending Machine. Goodbye!")
             break
+display_menu()
